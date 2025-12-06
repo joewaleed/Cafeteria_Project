@@ -1,0 +1,65 @@
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Cafeteria Managment System.exe
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Cafeteria Managment System.deps.json
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Cafeteria Managment System.runtimeconfig.json
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Cafeteria Managment System.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Cafeteria Managment System.pdb
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Guna.UI2.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\System.Management.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\runtimes\win\lib\net7.0\System.Management.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\Cafeteria Managment System.csproj.AssemblyReference.cache
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\Cafeteria_Managment_System.User.resources
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\Cafeteria Managment System.csproj.GenerateResource.cache
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\Cafeteria Managment System.GeneratedMSBuildEditorConfig.editorconfig
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\Cafeteria Managment System.AssemblyInfoInputs.cache
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\Cafeteria Managment System.AssemblyInfo.cs
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\Cafeteria Managment System.csproj.CoreCompileInputs.cache
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\Cafeteri.E32D6AA7.Up2Date
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\Cafeteria Managment System.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\refint\Cafeteria Managment System.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\Cafeteria Managment System.pdb
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\Cafeteria Managment System.genruntimeconfig.cache
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\ref\Cafeteria Managment System.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\Cafeteria_Managment_System.Properties.Resources.resources
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\Cafeteria_Managment_System.Category.resources
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\Cafeteria_Managment_System.Items.resources
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Azure.Core.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Azure.Identity.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Microsoft.Bcl.Cryptography.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Microsoft.Data.SqlClient.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Microsoft.Extensions.Caching.Memory.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Microsoft.Extensions.Options.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Microsoft.Extensions.Primitives.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Microsoft.Identity.Client.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Abstractions.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Logging.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Protocols.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Microsoft.IdentityModel.Tokens.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\Microsoft.SqlServer.Server.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\System.ClientModel.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\System.IdentityModel.Tokens.Jwt.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\System.Memory.Data.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\cs\Microsoft.Data.SqlClient.resources.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\pl\Microsoft.Data.SqlClient.resources.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\tr\Microsoft.Data.SqlClient.resources.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
