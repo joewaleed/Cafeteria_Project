@@ -9,14 +9,15 @@ CREATE TABLE Users(
 	UserPass varchar(25) NOT NULL,
 	UserPhone varchar(15) NULL unique,
 	UserAddress varchar(150) NOT NULL,
+	isAdmin bit Not Null
 )
 Go
 CREATE TABLE Item(
 	ItemCode int primary key IDENTITY(1,1) NOT NULL,
 	ItemName varchar(50) NOT NULL,
 	ItemPrice money NOT NULL,
-	ItemCat int NOT NULL foreign key references Cat(CatCode),
-
+	ItemCat int NOT NULL foreign key references Cat(CatCode) 
+	on delete cascade on update cascade
 )
 GO
 CREATE TABLE Cat(
@@ -27,9 +28,15 @@ CREATE TABLE Cat(
 GO
 CREATE TABLE Invoice(
 	InvoiceID int primary key IDENTITY(1,1) NOT NULL,
-	UserID int NULL foreign key references Users(UserID),
+	UserID int foreign key references Users(UserID)
+	on delete cascade on update cascade,
 	InvoiceDate date NOT NULL default getdate(),
 	InvoiceAmount int NOT NULL,
+)
+GO
+Create Table ItemPerInvoice(
+itemCode int foreign key refrences item(ItemCode),
+invoiceCode int foreign key refrences Invoice(InvoiceID)
 )
 GO
 
@@ -46,3 +53,11 @@ Delete from Cat where CatCode = {key}
 select itemCode, ItemName,cast(round(ItemPrice, 2) as decimal(10, 2)) as ItemPrice,ItemCat ,CatName from Item join cat on Item.ItemCat = Cat.CatCode
 
 Update Item set ItemName = '{NameTB.Text}',ItemPrice = {double.Parse(PriceTB.Text)},ItemCat = {int.Parse(CategoriesCB.SelectedValue.ToString())} where ItemCode = {key}
+
+Delete from Item where ItemCode = {key}
+
+/*Commands for Users table*/
+Insert into Users values ('{NameTB.Text}','{GenderCB.SelectedText}','{PasswordTB.Text}','{PhoneTB.Text}','{AddressTB.Text}')
+
+Update Users set UserName = '{NameTB.Text}',UserGender = '{GenderCB.SelectedItem.ToString().ToLower()}', UserPass = '{PasswordTB.Text}',UserPhone = '{PhoneTB.Text}',UserAddress = '{AddressTB.Text}' where UserID = {key}
+

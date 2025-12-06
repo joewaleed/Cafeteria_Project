@@ -15,6 +15,14 @@ namespace Cafeteria_Managment_System {
             ShowCategories();
         }
 
+        private static Category _instance;
+        public static Category GetInstance() {
+            if (_instance == null || _instance.IsDisposed) {
+                _instance = new Category();
+            }
+            return _instance;
+        }
+
         private void ShowCategories() {
             try {
                 string Query = "select * from Cat";
@@ -22,6 +30,11 @@ namespace Cafeteria_Managment_System {
             } catch (Exception exception) {
                 MessageBox.Show($"Couldn't retrive data \n {exception.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public void Switch() {
+            ShowCategories();
+            this.Show();
         }
 
         private void AddcatBtn_Click(object sender, EventArgs e) {
@@ -73,31 +86,44 @@ namespace Cafeteria_Managment_System {
         }
 
         private void Delcatbtn_Click(object sender, EventArgs e) {
-            if (string.IsNullOrWhiteSpace(NameTB.Text)) {
-                MessageBox.Show("Name field is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } else if (string.IsNullOrWhiteSpace(DescriptionTB.Text)) {
-                MessageBox.Show("Description field is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } else {
-                try {
-                    string Query = $"Delete from Cat where CatCode = {key}";
-                    confunc.SetData(Query);
-                    ShowCategories();
-                } catch (Exception exception) {
-                    MessageBox.Show($"Something went wrong \n {exception.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            DialogResult result = MessageBox.Show($"Are you sure you want to delete ({NameTB.Text}) completley?","Warning",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
+            if (result == DialogResult.OK) {
+                if (key == 0 || string.IsNullOrWhiteSpace(NameTB.Text)) {
+                    MessageBox.Show("Key not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                } else {
+                    try {
+                        string Query = $"Delete from Cat where CatCode = {key}";
+                        confunc.SetData(Query);
+                        ShowCategories();
+                    } catch (Exception exception) {
+                        MessageBox.Show($"Something went wrong \n {exception.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
 
         private void NameTB_KeyDown(object sender, KeyEventArgs e) {
-            if(e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter) {
                 DescriptionTB.Select();
             }
         }
 
         private void DescriptionTB_KeyDown(object sender, KeyEventArgs e) {
-            if(e.KeyCode == Keys.Enter) {
+            if (e.KeyCode == Keys.Enter) {
                 AddcatBtn_Click(sender, e);
             }
+        }
+
+        private void UserPanel_Click(object sender, EventArgs e) {
+            User user = User.GetInstance();
+            user.Switch();
+            this.Hide();
+        }
+
+        private void ItemPanel_Click(object sender, EventArgs e) {
+            Items items = Items.GetInstance();
+            items.Switch();
+            this.Hide();
         }
     }
 }

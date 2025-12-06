@@ -43,10 +43,10 @@
             panel6 = new Panel();
             pictureBox5 = new PictureBox();
             label4 = new Label();
-            panel4 = new Panel();
+            ItemPanel = new Panel();
             pictureBox3 = new PictureBox();
             label2 = new Label();
-            panel3 = new Panel();
+            UserPanel = new Panel();
             pictureBox2 = new PictureBox();
             label1 = new Label();
             pictureBox1 = new PictureBox();
@@ -69,9 +69,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            panel4.SuspendLayout();
+            ItemPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            panel3.SuspendLayout();
+            UserPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -92,8 +92,8 @@
             panel1.Controls.Add(panel7);
             panel1.Controls.Add(panel5);
             panel1.Controls.Add(panel6);
-            panel1.Controls.Add(panel4);
-            panel1.Controls.Add(panel3);
+            panel1.Controls.Add(ItemPanel);
+            panel1.Controls.Add(UserPanel);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
@@ -198,15 +198,17 @@
             label4.TabIndex = 1;
             label4.Text = "Invoices";
             // 
-            // panel4
+            // ItemPanel
             // 
-            panel4.BackColor = Color.FromArgb(101, 109, 74);
-            panel4.Controls.Add(pictureBox3);
-            panel4.Controls.Add(label2);
-            panel4.Location = new Point(0, 402);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(316, 99);
-            panel4.TabIndex = 4;
+            ItemPanel.BackColor = Color.FromArgb(101, 109, 74);
+            ItemPanel.Controls.Add(pictureBox3);
+            ItemPanel.Controls.Add(label2);
+            ItemPanel.Cursor = Cursors.Hand;
+            ItemPanel.Location = new Point(0, 402);
+            ItemPanel.Name = "ItemPanel";
+            ItemPanel.Size = new Size(316, 99);
+            ItemPanel.TabIndex = 4;
+            ItemPanel.Click += ItemPanel_Click;
             // 
             // pictureBox3
             // 
@@ -217,6 +219,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += ItemPanel_Click;
             // 
             // label2
             // 
@@ -229,16 +232,19 @@
             label2.Size = new Size(104, 50);
             label2.TabIndex = 1;
             label2.Text = "Items";
+            label2.Click += ItemPanel_Click;
             // 
-            // panel3
+            // UserPanel
             // 
-            panel3.BackColor = Color.FromArgb(101, 109, 74);
-            panel3.Controls.Add(pictureBox2);
-            panel3.Controls.Add(label1);
-            panel3.Location = new Point(0, 297);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(316, 99);
-            panel3.TabIndex = 3;
+            UserPanel.BackColor = Color.FromArgb(101, 109, 74);
+            UserPanel.Controls.Add(pictureBox2);
+            UserPanel.Controls.Add(label1);
+            UserPanel.Cursor = Cursors.Hand;
+            UserPanel.Location = new Point(0, 297);
+            UserPanel.Name = "UserPanel";
+            UserPanel.Size = new Size(316, 99);
+            UserPanel.TabIndex = 3;
+            UserPanel.Click += UserPanel_Click;
             // 
             // pictureBox2
             // 
@@ -249,6 +255,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += UserPanel_Click;
             // 
             // label1
             // 
@@ -261,6 +268,7 @@
             label1.Size = new Size(103, 50);
             label1.TabIndex = 1;
             label1.Text = "Users";
+            label1.Click += UserPanel_Click;
             // 
             // pictureBox1
             // 
@@ -317,7 +325,7 @@
             panel8.Controls.Add(NameTB);
             panel8.Controls.Add(pictureBox8);
             panel8.Controls.Add(label7);
-            panel8.Location = new Point(366, 75);
+            panel8.Location = new Point(335, 75);
             panel8.Name = "panel8";
             panel8.Size = new Size(366, 341);
             panel8.TabIndex = 2;
@@ -461,13 +469,13 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             CategoriesDG.DefaultCellStyle = dataGridViewCellStyle3;
             CategoriesDG.GridColor = Color.FromArgb(222, 201, 231);
-            CategoriesDG.Location = new Point(746, 75);
+            CategoriesDG.Location = new Point(707, 75);
             CategoriesDG.Name = "CategoriesDG";
             CategoriesDG.ReadOnly = true;
             CategoriesDG.RowHeadersVisible = false;
             CategoriesDG.RowHeadersWidth = 51;
             CategoriesDG.RowTemplate.Height = 40;
-            CategoriesDG.Size = new Size(741, 757);
+            CategoriesDG.Size = new Size(781, 757);
             CategoriesDG.TabIndex = 3;
             CategoriesDG.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Amethyst;
             CategoriesDG.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(225, 205, 233);
@@ -519,11 +527,11 @@
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
+            ItemPanel.ResumeLayout(false);
+            ItemPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
+            UserPanel.ResumeLayout(false);
+            UserPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
@@ -543,12 +551,12 @@
         private Panel panel2;
         private PictureBox pictureBox1;
         private Label label1;
-        private Panel panel3;
+        private Panel UserPanel;
         private PictureBox pictureBox2;
         private Panel panel6;
         private PictureBox pictureBox5;
         private Label label4;
-        private Panel panel4;
+        private Panel ItemPanel;
         private PictureBox pictureBox3;
         private Label label2;
         private Panel panel7;

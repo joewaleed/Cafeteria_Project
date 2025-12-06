@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Text;
@@ -16,13 +17,28 @@ namespace Cafeteria_Managment_System {
             ShowItems();
             GetCategories();
         }
+        private static Items _instance;
+        public static Items GetInstance() {
+            if (_instance == null || _instance.IsDisposed) {
+                _instance = new Items();
+            }
+            return _instance;
+        }
+
         private void ShowItems() {
             try {
                 string Query = "select itemCode, ItemName,cast(round(ItemPrice, 2) as decimal(10, 2)) as ItemPrice,ItemCat ,CatName from Item join cat on Item.ItemCat = Cat.CatCode";
                 ItemsDG.DataSource = confunc.GetData(Query);
+                ItemsDG.Columns["ItemCat"].Visible = false;
             } catch (Exception exception) {
                 MessageBox.Show($"Couldn't retrive data \n {exception.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public void Switch() {
+            ShowItems();
+            GetCategories();
+            this.Show();
         }
 
         private void GetCategories() {
@@ -30,7 +46,6 @@ namespace Cafeteria_Managment_System {
             CategoriesCB.ValueMember = confunc.GetData(Query).Columns["CatCode"].ToString();
             CategoriesCB.DisplayMember = confunc.GetData(Query).Columns["CatName"].ToString();
             CategoriesCB.DataSource = confunc.GetData(Query);
-            ItemsDG.Columns["ItemCat"].Visible = false;
         }
 
         private void AdditmBtn_Click(object sender, EventArgs e) {
@@ -56,6 +71,7 @@ namespace Cafeteria_Managment_System {
             key = 0;
             NameTB.Text = "";
             PriceTB.Text = "";
+            CategoriesCB.SelectedIndex = 0;
         }
 
         private void ItemsDG_CellClick(object sender, DataGridViewCellEventArgs e) {
@@ -87,9 +103,9 @@ namespace Cafeteria_Managment_System {
         }
 
         private void Delitmbtn_Click(object sender, EventArgs e) {
-            if(key == 0){
+            if (key == 0 || string.IsNullOrWhiteSpace(NameTB.Text)) {
                 MessageBox.Show("Key not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }else {
+            } else {
                 try {
                     string Query = $"Delete from Item where ItemCode = {key}";
                     confunc.SetData(Query);
@@ -99,6 +115,18 @@ namespace Cafeteria_Managment_System {
                     MessageBox.Show($"Something went wrong \n {exception.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void UserPanel_Click(object sender, EventArgs e) {
+            User user = User.GetInstance();
+            user.Switch();
+            this.Hide();
+        }
+
+        private void CategoriesPanel_Click(object sender, EventArgs e) {
+            Category category = Category.GetInstance();
+            category.Switch();
+            this.Hide();
         }
     }
 }

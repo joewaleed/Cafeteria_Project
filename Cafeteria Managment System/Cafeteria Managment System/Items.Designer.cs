@@ -39,18 +39,18 @@ namespace Cafeteria_Managment_System {
             panel7 = new Panel();
             pictureBox6 = new PictureBox();
             label5 = new Label();
-            panel5 = new Panel();
+            CategoriesPanel = new Panel();
             pictureBox4 = new PictureBox();
-            label3 = new Label();
-            panel6 = new Panel();
+            CategoriesLabel = new Label();
+            InvoicePanel = new Panel();
             pictureBox5 = new PictureBox();
             label4 = new Label();
             panel4 = new Panel();
             pictureBox3 = new PictureBox();
             label2 = new Label();
-            panel3 = new Panel();
+            UserPanel = new Panel();
             pictureBox2 = new PictureBox();
-            label1 = new Label();
+            UserLabel = new Label();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
             label6 = new Label();
@@ -69,13 +69,13 @@ namespace Cafeteria_Managment_System {
             panel1.SuspendLayout();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            panel5.SuspendLayout();
+            CategoriesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            panel6.SuspendLayout();
+            InvoicePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            panel3.SuspendLayout();
+            UserPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -94,10 +94,10 @@ namespace Cafeteria_Managment_System {
             // 
             panel1.BackColor = Color.FromArgb(127, 79, 36);
             panel1.Controls.Add(panel7);
-            panel1.Controls.Add(panel5);
-            panel1.Controls.Add(panel6);
+            panel1.Controls.Add(CategoriesPanel);
+            panel1.Controls.Add(InvoicePanel);
             panel1.Controls.Add(panel4);
-            panel1.Controls.Add(panel3);
+            panel1.Controls.Add(UserPanel);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
@@ -138,15 +138,17 @@ namespace Cafeteria_Managment_System {
             label5.TabIndex = 1;
             label5.Text = "LogOut";
             // 
-            // panel5
+            // CategoriesPanel
             // 
-            panel5.BackColor = Color.FromArgb(101, 109, 74);
-            panel5.Controls.Add(pictureBox4);
-            panel5.Controls.Add(label3);
-            panel5.Location = new Point(0, 507);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(316, 99);
-            panel5.TabIndex = 5;
+            CategoriesPanel.BackColor = Color.FromArgb(101, 109, 74);
+            CategoriesPanel.Controls.Add(pictureBox4);
+            CategoriesPanel.Controls.Add(CategoriesLabel);
+            CategoriesPanel.Cursor = Cursors.Hand;
+            CategoriesPanel.Location = new Point(0, 507);
+            CategoriesPanel.Name = "CategoriesPanel";
+            CategoriesPanel.Size = new Size(316, 99);
+            CategoriesPanel.TabIndex = 5;
+            CategoriesPanel.Click += CategoriesPanel_Click;
             // 
             // pictureBox4
             // 
@@ -157,28 +159,30 @@ namespace Cafeteria_Managment_System {
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 2;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += CategoriesPanel_Click;
             // 
-            // label3
+            // CategoriesLabel
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Poppins", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(164, 172, 134);
-            label3.Location = new Point(105, 32);
-            label3.Margin = new Padding(5, 0, 5, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(180, 50);
-            label3.TabIndex = 1;
-            label3.Text = "Categories";
+            CategoriesLabel.AutoSize = true;
+            CategoriesLabel.Font = new Font("Poppins", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            CategoriesLabel.ForeColor = Color.FromArgb(164, 172, 134);
+            CategoriesLabel.Location = new Point(105, 32);
+            CategoriesLabel.Margin = new Padding(5, 0, 5, 0);
+            CategoriesLabel.Name = "CategoriesLabel";
+            CategoriesLabel.Size = new Size(180, 50);
+            CategoriesLabel.TabIndex = 1;
+            CategoriesLabel.Text = "Categories";
+            CategoriesLabel.Click += CategoriesPanel_Click;
             // 
-            // panel6
+            // InvoicePanel
             // 
-            panel6.BackColor = Color.FromArgb(101, 109, 74);
-            panel6.Controls.Add(pictureBox5);
-            panel6.Controls.Add(label4);
-            panel6.Location = new Point(0, 612);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(316, 99);
-            panel6.TabIndex = 4;
+            InvoicePanel.BackColor = Color.FromArgb(101, 109, 74);
+            InvoicePanel.Controls.Add(pictureBox5);
+            InvoicePanel.Controls.Add(label4);
+            InvoicePanel.Location = new Point(0, 612);
+            InvoicePanel.Name = "InvoicePanel";
+            InvoicePanel.Size = new Size(316, 99);
+            InvoicePanel.TabIndex = 4;
             // 
             // pictureBox5
             // 
@@ -234,15 +238,17 @@ namespace Cafeteria_Managment_System {
             label2.TabIndex = 1;
             label2.Text = "Items";
             // 
-            // panel3
+            // UserPanel
             // 
-            panel3.BackColor = Color.FromArgb(101, 109, 74);
-            panel3.Controls.Add(pictureBox2);
-            panel3.Controls.Add(label1);
-            panel3.Location = new Point(0, 297);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(316, 99);
-            panel3.TabIndex = 3;
+            UserPanel.BackColor = Color.FromArgb(101, 109, 74);
+            UserPanel.Controls.Add(pictureBox2);
+            UserPanel.Controls.Add(UserLabel);
+            UserPanel.Cursor = Cursors.Hand;
+            UserPanel.Location = new Point(0, 297);
+            UserPanel.Name = "UserPanel";
+            UserPanel.Size = new Size(316, 99);
+            UserPanel.TabIndex = 3;
+            UserPanel.Click += UserPanel_Click;
             // 
             // pictureBox2
             // 
@@ -253,18 +259,21 @@ namespace Cafeteria_Managment_System {
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
+            pictureBox2.Click += UserPanel_Click;
             // 
-            // label1
+            // UserLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Poppins", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(164, 172, 134);
-            label1.Location = new Point(105, 32);
-            label1.Margin = new Padding(5, 0, 5, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(103, 50);
-            label1.TabIndex = 1;
-            label1.Text = "Users";
+            UserLabel.AutoSize = true;
+            UserLabel.Cursor = Cursors.Hand;
+            UserLabel.Font = new Font("Poppins", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            UserLabel.ForeColor = Color.FromArgb(164, 172, 134);
+            UserLabel.Location = new Point(105, 32);
+            UserLabel.Margin = new Padding(5, 0, 5, 0);
+            UserLabel.Name = "UserLabel";
+            UserLabel.Size = new Size(103, 50);
+            UserLabel.TabIndex = 1;
+            UserLabel.Text = "Users";
+            UserLabel.Click += UserPanel_Click;
             // 
             // pictureBox1
             // 
@@ -323,7 +332,7 @@ namespace Cafeteria_Managment_System {
             panel8.Controls.Add(NameTB);
             panel8.Controls.Add(pictureBox8);
             panel8.Controls.Add(label7);
-            panel8.Location = new Point(366, 75);
+            panel8.Location = new Point(335, 75);
             panel8.Name = "panel8";
             panel8.Size = new Size(366, 426);
             panel8.TabIndex = 2;
@@ -487,13 +496,13 @@ namespace Cafeteria_Managment_System {
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             ItemsDG.DefaultCellStyle = dataGridViewCellStyle3;
             ItemsDG.GridColor = Color.FromArgb(222, 201, 231);
-            ItemsDG.Location = new Point(746, 75);
+            ItemsDG.Location = new Point(707, 75);
             ItemsDG.Name = "ItemsDG";
             ItemsDG.ReadOnly = true;
             ItemsDG.RowHeadersVisible = false;
             ItemsDG.RowHeadersWidth = 51;
             ItemsDG.RowTemplate.Height = 40;
-            ItemsDG.Size = new Size(741, 757);
+            ItemsDG.Size = new Size(781, 757);
             ItemsDG.TabIndex = 3;
             ItemsDG.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Amethyst;
             ItemsDG.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(225, 205, 233);
@@ -539,17 +548,17 @@ namespace Cafeteria_Managment_System {
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
+            CategoriesPanel.ResumeLayout(false);
+            CategoriesPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
+            InvoicePanel.ResumeLayout(false);
+            InvoicePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
+            UserPanel.ResumeLayout(false);
+            UserPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
@@ -568,10 +577,10 @@ namespace Cafeteria_Managment_System {
         private Panel panel1;
         private Panel panel2;
         private PictureBox pictureBox1;
-        private Label label1;
-        private Panel panel3;
+        private Label UserLabel;
+        private Panel UserPanel;
         private PictureBox pictureBox2;
-        private Panel panel6;
+        private Panel InvoicePanel;
         private PictureBox pictureBox5;
         private Label label4;
         private Panel panel4;
@@ -580,9 +589,9 @@ namespace Cafeteria_Managment_System {
         private Panel panel7;
         private PictureBox pictureBox6;
         private Label label5;
-        private Panel panel5;
+        private Panel CategoriesPanel;
         private PictureBox pictureBox4;
-        private Label label3;
+        private Label CategoriesLabel;
         private PictureBox pictureBox7;
         private Label label6;
         private Panel panel8;
