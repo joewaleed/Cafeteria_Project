@@ -16,6 +16,7 @@ namespace Cafeteria_Managment_System {
             confunc = new ConnectionFunction();
             ShowItems();
             GetCategories();
+            wlcmmssg.Text = $"{CurrentUser.Gender}{CurrentUser.Name}";
         }
         private static Items _instance;
         public static Items GetInstance() {
@@ -38,6 +39,7 @@ namespace Cafeteria_Managment_System {
         public void Switch() {
             ShowItems();
             GetCategories();
+            wlcmmssg.Text = $"{CurrentUser.Gender}{CurrentUser.Name}";
             this.Show();
         }
 
@@ -126,6 +128,22 @@ namespace Cafeteria_Managment_System {
         private void CategoriesPanel_Click(object sender, EventArgs e) {
             Category category = Category.GetInstance();
             category.Switch();
+            this.Hide();
+        }
+
+        private void logoutpnl_Click(object sender, EventArgs e) {
+            Login logout = Login.GetInstance();
+            logout.Switch();
+            this.Hide();
+        }
+
+        private void closebtn_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
+
+        private void invpnl_Click(object sender, EventArgs e) {
+            Invoices invoices = Invoices.GetInstance();
+            invoices.Switch();
             this.Hide();
         }
     }

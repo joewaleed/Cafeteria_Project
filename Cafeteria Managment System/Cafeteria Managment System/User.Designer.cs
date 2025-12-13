@@ -42,13 +42,15 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panel1 = new Panel();
-            panel7 = new Panel();
+            wlcmmssg = new Label();
+            label9 = new Label();
+            Logoutpnl = new Panel();
             pictureBox6 = new PictureBox();
             label5 = new Label();
             CategoriesPanel = new Panel();
             pictureBox4 = new PictureBox();
             label3 = new Label();
-            panel6 = new Panel();
+            invpnl = new Panel();
             pictureBox5 = new PictureBox();
             label4 = new Label();
             ItemsPanel = new Panel();
@@ -60,8 +62,9 @@
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
             label6 = new Label();
-            pictureBox7 = new PictureBox();
+            closebtn = new PictureBox();
             panel8 = new Panel();
+            AdminCheck = new CheckBox();
             Delusrbtn = new Button();
             Editusrbtn = new Button();
             AddusrBtn = new Button();
@@ -74,13 +77,12 @@
             pictureBox8 = new PictureBox();
             label7 = new Label();
             UsersDG = new Guna.UI2.WinForms.Guna2DataGridView();
-            AdminCheck = new CheckBox();
             panel1.SuspendLayout();
-            panel7.SuspendLayout();
+            Logoutpnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             CategoriesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            panel6.SuspendLayout();
+            invpnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ItemsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -88,7 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)closebtn).BeginInit();
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)UsersDG).BeginInit();
@@ -102,9 +104,11 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(127, 79, 36);
-            panel1.Controls.Add(panel7);
+            panel1.Controls.Add(wlcmmssg);
+            panel1.Controls.Add(label9);
+            panel1.Controls.Add(Logoutpnl);
             panel1.Controls.Add(CategoriesPanel);
-            panel1.Controls.Add(panel6);
+            panel1.Controls.Add(invpnl);
             panel1.Controls.Add(ItemsPanel);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(pictureBox1);
@@ -115,15 +119,43 @@
             panel1.Size = new Size(316, 850);
             panel1.TabIndex = 0;
             // 
-            // panel7
+            // wlcmmssg
             // 
-            panel7.BackColor = Color.FromArgb(101, 109, 74);
-            panel7.Controls.Add(pictureBox6);
-            panel7.Controls.Add(label5);
-            panel7.Location = new Point(0, 751);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(316, 99);
-            panel7.TabIndex = 6;
+            wlcmmssg.AutoSize = true;
+            wlcmmssg.FlatStyle = FlatStyle.Flat;
+            wlcmmssg.Font = new Font("Poppins Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            wlcmmssg.ForeColor = Color.FromArgb(164, 172, 134);
+            wlcmmssg.Location = new Point(86, 187);
+            wlcmmssg.Name = "wlcmmssg";
+            wlcmmssg.Size = new Size(123, 36);
+            wlcmmssg.TabIndex = 8;
+            wlcmmssg.Text = "Mr.Yousef";
+            wlcmmssg.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.FlatStyle = FlatStyle.Flat;
+            label9.Font = new Font("Poppins Light", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.FromArgb(164, 172, 134);
+            label9.Location = new Point(86, 162);
+            label9.Name = "label9";
+            label9.Size = new Size(108, 36);
+            label9.TabIndex = 7;
+            label9.Text = "Welcome";
+            label9.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Logoutpnl
+            // 
+            Logoutpnl.BackColor = Color.FromArgb(101, 109, 74);
+            Logoutpnl.Controls.Add(pictureBox6);
+            Logoutpnl.Controls.Add(label5);
+            Logoutpnl.Cursor = Cursors.Hand;
+            Logoutpnl.Location = new Point(0, 751);
+            Logoutpnl.Name = "Logoutpnl";
+            Logoutpnl.Size = new Size(316, 99);
+            Logoutpnl.TabIndex = 6;
+            Logoutpnl.Click += Logoutpnl_Click;
             // 
             // pictureBox6
             // 
@@ -134,18 +166,20 @@
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 2;
             pictureBox6.TabStop = false;
+            pictureBox6.Click += Logoutpnl_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Poppins", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.FromArgb(193, 18, 31);
+            label5.ForeColor = Color.Red;
             label5.Location = new Point(97, 31);
             label5.Margin = new Padding(5, 0, 5, 0);
             label5.Name = "label5";
             label5.Size = new Size(124, 50);
             label5.TabIndex = 1;
             label5.Text = "LogOut";
+            label5.Click += Logoutpnl_Click;
             // 
             // CategoriesPanel
             // 
@@ -183,15 +217,17 @@
             label3.Text = "Categories";
             label3.Click += CategoriesPanel_Click;
             // 
-            // panel6
+            // invpnl
             // 
-            panel6.BackColor = Color.FromArgb(101, 109, 74);
-            panel6.Controls.Add(pictureBox5);
-            panel6.Controls.Add(label4);
-            panel6.Location = new Point(0, 612);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(316, 99);
-            panel6.TabIndex = 4;
+            invpnl.BackColor = Color.FromArgb(101, 109, 74);
+            invpnl.Controls.Add(pictureBox5);
+            invpnl.Controls.Add(label4);
+            invpnl.Cursor = Cursors.Hand;
+            invpnl.Location = new Point(0, 612);
+            invpnl.Name = "invpnl";
+            invpnl.Size = new Size(316, 99);
+            invpnl.TabIndex = 4;
+            invpnl.Click += invpnl_Click;
             // 
             // pictureBox5
             // 
@@ -202,6 +238,7 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 2;
             pictureBox5.TabStop = false;
+            pictureBox5.Click += invpnl_Click;
             // 
             // label4
             // 
@@ -214,6 +251,7 @@
             label4.Size = new Size(143, 50);
             label4.TabIndex = 1;
             label4.Text = "Invoices";
+            label4.Click += invpnl_Click;
             // 
             // ItemsPanel
             // 
@@ -298,7 +336,7 @@
             // 
             panel2.BackColor = Color.FromArgb(147, 102, 57);
             panel2.Controls.Add(label6);
-            panel2.Controls.Add(pictureBox7);
+            panel2.Controls.Add(closebtn);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(316, 0);
             panel2.Margin = new Padding(5);
@@ -318,15 +356,17 @@
             label6.TabIndex = 2;
             label6.Text = "Cafetria Managment System";
             // 
-            // pictureBox7
+            // closebtn
             // 
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(1137, 1);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(44, 44);
-            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox7.TabIndex = 0;
-            pictureBox7.TabStop = false;
+            closebtn.Cursor = Cursors.Hand;
+            closebtn.Image = (Image)resources.GetObject("closebtn.Image");
+            closebtn.Location = new Point(1137, 1);
+            closebtn.Name = "closebtn";
+            closebtn.Size = new Size(44, 44);
+            closebtn.SizeMode = PictureBoxSizeMode.Zoom;
+            closebtn.TabIndex = 0;
+            closebtn.TabStop = false;
+            closebtn.Click += closebtn_Click;
             // 
             // panel8
             // 
@@ -347,6 +387,19 @@
             panel8.Name = "panel8";
             panel8.Size = new Size(366, 573);
             panel8.TabIndex = 2;
+            // 
+            // AdminCheck
+            // 
+            AdminCheck.AutoSize = true;
+            AdminCheck.BackColor = Color.Transparent;
+            AdminCheck.FlatStyle = FlatStyle.Flat;
+            AdminCheck.ForeColor = Color.FromArgb(164, 172, 134);
+            AdminCheck.Location = new Point(120, 438);
+            AdminCheck.Name = "AdminCheck";
+            AdminCheck.Size = new Size(119, 40);
+            AdminCheck.TabIndex = 16;
+            AdminCheck.Text = "isAdmin";
+            AdminCheck.UseVisualStyleBackColor = false;
             // 
             // Delusrbtn
             // 
@@ -544,6 +597,7 @@
             UsersDG.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(225, 205, 233);
             UsersDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            UsersDG.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             UsersDG.BackgroundColor = Color.FromArgb(88, 47, 14);
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(155, 89, 182);
@@ -596,18 +650,6 @@
             UsersDG.ThemeStyle.RowsStyle.SelectionForeColor = Color.Black;
             UsersDG.CellClick += UsersDG_CellClick;
             // 
-            // AdminCheck
-            // 
-            AdminCheck.AutoSize = true;
-            AdminCheck.FlatStyle = FlatStyle.Flat;
-            AdminCheck.ForeColor = Color.FromArgb(164, 172, 134);
-            AdminCheck.Location = new Point(120, 438);
-            AdminCheck.Name = "AdminCheck";
-            AdminCheck.Size = new Size(119, 40);
-            AdminCheck.TabIndex = 16;
-            AdminCheck.Text = "isAdmin";
-            AdminCheck.UseVisualStyleBackColor = true;
-            // 
             // User
             // 
             AutoScaleDimensions = new SizeF(13F, 36F);
@@ -625,14 +667,15 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             panel1.ResumeLayout(false);
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
+            panel1.PerformLayout();
+            Logoutpnl.ResumeLayout(false);
+            Logoutpnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             CategoriesPanel.ResumeLayout(false);
             CategoriesPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
+            invpnl.ResumeLayout(false);
+            invpnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ItemsPanel.ResumeLayout(false);
             ItemsPanel.PerformLayout();
@@ -643,7 +686,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)closebtn).EndInit();
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
@@ -660,19 +703,16 @@
         private Label label1;
         private Panel panel3;
         private PictureBox pictureBox2;
-        private Panel panel6;
-        private PictureBox pictureBox5;
-        private Label label4;
         private Panel ItemsPanel;
         private PictureBox pictureBox3;
         private Label label2;
-        private Panel panel7;
+        private Panel Logoutpnl;
         private PictureBox pictureBox6;
         private Label label5;
         private Panel CategoriesPanel;
         private PictureBox pictureBox4;
         private Label label3;
-        private PictureBox pictureBox7;
+        private PictureBox closebtn;
         private Label label6;
         private Panel panel8;
         private PictureBox pictureBox8;
@@ -688,5 +728,10 @@
         private Button Editusrbtn;
         private Guna.UI2.WinForms.Guna2DataGridView UsersDG;
         private CheckBox AdminCheck;
+        private Panel invpnl;
+        private PictureBox pictureBox5;
+        private Label label4;
+        private Label label9;
+        private Label wlcmmssg;
     }
 }

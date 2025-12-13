@@ -34,13 +34,15 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panel1 = new Panel();
-            panel7 = new Panel();
+            wlcmmssg = new Label();
+            label9 = new Label();
+            logoutpnl = new Panel();
             pictureBox6 = new PictureBox();
             label5 = new Label();
             panel5 = new Panel();
             pictureBox4 = new PictureBox();
             label3 = new Label();
-            panel6 = new Panel();
+            invpnl = new Panel();
             pictureBox5 = new PictureBox();
             label4 = new Label();
             ItemPanel = new Panel();
@@ -52,7 +54,7 @@
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
             label6 = new Label();
-            pictureBox7 = new PictureBox();
+            closebtn = new PictureBox();
             panel8 = new Panel();
             Delcatbtn = new Button();
             Editcatbtn = new Button();
@@ -63,11 +65,11 @@
             label7 = new Label();
             CategoriesDG = new Guna.UI2.WinForms.Guna2DataGridView();
             panel1.SuspendLayout();
-            panel7.SuspendLayout();
+            logoutpnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            panel6.SuspendLayout();
+            invpnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ItemPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -75,7 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)closebtn).BeginInit();
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CategoriesDG).BeginInit();
@@ -89,9 +91,11 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(127, 79, 36);
-            panel1.Controls.Add(panel7);
+            panel1.Controls.Add(wlcmmssg);
+            panel1.Controls.Add(label9);
+            panel1.Controls.Add(logoutpnl);
             panel1.Controls.Add(panel5);
-            panel1.Controls.Add(panel6);
+            panel1.Controls.Add(invpnl);
             panel1.Controls.Add(ItemPanel);
             panel1.Controls.Add(UserPanel);
             panel1.Controls.Add(pictureBox1);
@@ -102,15 +106,43 @@
             panel1.Size = new Size(316, 850);
             panel1.TabIndex = 0;
             // 
-            // panel7
+            // wlcmmssg
             // 
-            panel7.BackColor = Color.FromArgb(101, 109, 74);
-            panel7.Controls.Add(pictureBox6);
-            panel7.Controls.Add(label5);
-            panel7.Location = new Point(0, 751);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(316, 99);
-            panel7.TabIndex = 6;
+            wlcmmssg.AutoSize = true;
+            wlcmmssg.FlatStyle = FlatStyle.Flat;
+            wlcmmssg.Font = new Font("Poppins Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            wlcmmssg.ForeColor = Color.FromArgb(164, 172, 134);
+            wlcmmssg.Location = new Point(86, 187);
+            wlcmmssg.Name = "wlcmmssg";
+            wlcmmssg.Size = new Size(123, 36);
+            wlcmmssg.TabIndex = 10;
+            wlcmmssg.Text = "Mr.Yousef";
+            wlcmmssg.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.FlatStyle = FlatStyle.Flat;
+            label9.Font = new Font("Poppins Light", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.FromArgb(164, 172, 134);
+            label9.Location = new Point(86, 162);
+            label9.Name = "label9";
+            label9.Size = new Size(108, 36);
+            label9.TabIndex = 9;
+            label9.Text = "Welcome";
+            label9.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // logoutpnl
+            // 
+            logoutpnl.BackColor = Color.FromArgb(101, 109, 74);
+            logoutpnl.Controls.Add(pictureBox6);
+            logoutpnl.Controls.Add(label5);
+            logoutpnl.Cursor = Cursors.Hand;
+            logoutpnl.Location = new Point(0, 751);
+            logoutpnl.Name = "logoutpnl";
+            logoutpnl.Size = new Size(316, 99);
+            logoutpnl.TabIndex = 6;
+            logoutpnl.Click += logoutpnl_Click;
             // 
             // pictureBox6
             // 
@@ -121,18 +153,20 @@
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 2;
             pictureBox6.TabStop = false;
+            pictureBox6.Click += logoutpnl_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Poppins", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.FromArgb(193, 18, 31);
+            label5.ForeColor = Color.Red;
             label5.Location = new Point(97, 31);
             label5.Margin = new Padding(5, 0, 5, 0);
             label5.Name = "label5";
             label5.Size = new Size(124, 50);
             label5.TabIndex = 1;
             label5.Text = "LogOut";
+            label5.Click += logoutpnl_Click;
             // 
             // panel5
             // 
@@ -166,15 +200,17 @@
             label3.TabIndex = 1;
             label3.Text = "Categories";
             // 
-            // panel6
+            // invpnl
             // 
-            panel6.BackColor = Color.FromArgb(101, 109, 74);
-            panel6.Controls.Add(pictureBox5);
-            panel6.Controls.Add(label4);
-            panel6.Location = new Point(0, 612);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(316, 99);
-            panel6.TabIndex = 4;
+            invpnl.BackColor = Color.FromArgb(101, 109, 74);
+            invpnl.Controls.Add(pictureBox5);
+            invpnl.Controls.Add(label4);
+            invpnl.Cursor = Cursors.Hand;
+            invpnl.Location = new Point(0, 612);
+            invpnl.Name = "invpnl";
+            invpnl.Size = new Size(316, 99);
+            invpnl.TabIndex = 4;
+            invpnl.Click += invpnl_Click;
             // 
             // pictureBox5
             // 
@@ -185,6 +221,7 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 2;
             pictureBox5.TabStop = false;
+            pictureBox5.Click += invpnl_Click;
             // 
             // label4
             // 
@@ -197,6 +234,7 @@
             label4.Size = new Size(143, 50);
             label4.TabIndex = 1;
             label4.Text = "Invoices";
+            label4.Click += invpnl_Click;
             // 
             // ItemPanel
             // 
@@ -285,7 +323,7 @@
             // 
             panel2.BackColor = Color.FromArgb(147, 102, 57);
             panel2.Controls.Add(label6);
-            panel2.Controls.Add(pictureBox7);
+            panel2.Controls.Add(closebtn);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(316, 0);
             panel2.Margin = new Padding(5);
@@ -305,15 +343,17 @@
             label6.TabIndex = 2;
             label6.Text = "Cafetria Managment System";
             // 
-            // pictureBox7
+            // closebtn
             // 
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(1137, 1);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(44, 44);
-            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox7.TabIndex = 0;
-            pictureBox7.TabStop = false;
+            closebtn.Cursor = Cursors.Hand;
+            closebtn.Image = (Image)resources.GetObject("closebtn.Image");
+            closebtn.Location = new Point(1137, 1);
+            closebtn.Name = "closebtn";
+            closebtn.Size = new Size(44, 44);
+            closebtn.SizeMode = PictureBoxSizeMode.Zoom;
+            closebtn.TabIndex = 0;
+            closebtn.TabStop = false;
+            closebtn.Click += closebtn_Click;
             // 
             // panel8
             // 
@@ -518,14 +558,15 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             panel1.ResumeLayout(false);
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
+            panel1.PerformLayout();
+            logoutpnl.ResumeLayout(false);
+            logoutpnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
+            invpnl.ResumeLayout(false);
+            invpnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ItemPanel.ResumeLayout(false);
             ItemPanel.PerformLayout();
@@ -536,7 +577,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)closebtn).EndInit();
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
@@ -553,19 +594,16 @@
         private Label label1;
         private Panel UserPanel;
         private PictureBox pictureBox2;
-        private Panel panel6;
-        private PictureBox pictureBox5;
-        private Label label4;
         private Panel ItemPanel;
         private PictureBox pictureBox3;
         private Label label2;
-        private Panel panel7;
+        private Panel logoutpnl;
         private PictureBox pictureBox6;
         private Label label5;
         private Panel panel5;
         private PictureBox pictureBox4;
         private Label label3;
-        private PictureBox pictureBox7;
+        private PictureBox closebtn;
         private Label label6;
         private Panel panel8;
         private PictureBox pictureBox8;
@@ -576,5 +614,10 @@
         private Button Delcatbtn;
         private Button Editcatbtn;
         private Guna.UI2.WinForms.Guna2DataGridView CategoriesDG;
+        private Panel invpnl;
+        private PictureBox pictureBox5;
+        private Label label4;
+        private Label wlcmmssg;
+        private Label label9;
     }
 }

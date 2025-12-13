@@ -12,18 +12,18 @@ CREATE TABLE Users(
 	isAdmin bit Not Null
 )
 Go
+CREATE TABLE Cat(
+	CatCode int primary key IDENTITY(1,1) NOT NULL,
+	CatName varchar(50) unique NOT NULL,
+	CatDesc varchar(100) NULL,
+)
+GO
 CREATE TABLE Item(
 	ItemCode int primary key IDENTITY(1,1) NOT NULL,
 	ItemName varchar(50) NOT NULL,
 	ItemPrice money NOT NULL,
 	ItemCat int NOT NULL foreign key references Cat(CatCode) 
 	on delete cascade on update cascade
-)
-GO
-CREATE TABLE Cat(
-	CatCode int primary key IDENTITY(1,1) NOT NULL,
-	CatName varchar(50) unique NOT NULL,
-	CatDesc varchar(100) NULL,
 )
 GO
 CREATE TABLE Invoice(
@@ -34,12 +34,15 @@ CREATE TABLE Invoice(
 	InvoiceAmount int NOT NULL,
 )
 GO
-Create Table ItemPerInvoice(
-itemCode int foreign key refrences item(ItemCode),
-invoiceCode int foreign key refrences Invoice(InvoiceID)
+create table ItemPerInvoice(
+itInInvID int primary key identity(1,1),
+invoiceID int foreign key references Invoice(InvoiceID) not null,
+itemName varchar(50) not null,
+itemPrice money not null,
+itemQunatity int not null
 )
 GO
-
+create index ItIV_Index on ItemPerInvoice(InvoiceID)
 /*Commands for Categories(Cat) Table*/
 select * from Cat
 

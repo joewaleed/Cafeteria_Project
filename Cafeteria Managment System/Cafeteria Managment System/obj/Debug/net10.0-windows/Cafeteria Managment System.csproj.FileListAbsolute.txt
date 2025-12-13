@@ -64,3 +64,7 @@ D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System
 D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\bin\Debug\net10.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\Cafeteria Managment System.sourcelink.json
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\Cafeteria_Managment_System.Billing.resources
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\Cafeteria_Managment_System.Login.resources
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\Cafeteria_Managment_System.Invoices.resources
+D:\CollegeFiles\Introduction To Database\_Project_app\Cafeteria Managment System\Cafeteria Managment System\obj\Debug\net10.0-windows\Cafeteria_Managment_System.Welcome.resources

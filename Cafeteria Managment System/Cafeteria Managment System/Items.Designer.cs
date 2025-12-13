@@ -36,15 +36,17 @@ namespace Cafeteria_Managment_System {
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panel1 = new Panel();
-            panel7 = new Panel();
+            wlcmmssg = new Label();
+            label9 = new Label();
+            invpnl = new Panel();
+            pictureBox5 = new PictureBox();
+            label4 = new Label();
+            logoutpnl = new Panel();
             pictureBox6 = new PictureBox();
             label5 = new Label();
             CategoriesPanel = new Panel();
             pictureBox4 = new PictureBox();
             CategoriesLabel = new Label();
-            InvoicePanel = new Panel();
-            pictureBox5 = new PictureBox();
-            label4 = new Label();
             panel4 = new Panel();
             pictureBox3 = new PictureBox();
             label2 = new Label();
@@ -54,7 +56,7 @@ namespace Cafeteria_Managment_System {
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
             label6 = new Label();
-            pictureBox7 = new PictureBox();
+            closebtn = new PictureBox();
             panel8 = new Panel();
             CategoriesCB = new ComboBox();
             label8 = new Label();
@@ -67,19 +69,19 @@ namespace Cafeteria_Managment_System {
             label7 = new Label();
             ItemsDG = new Guna.UI2.WinForms.Guna2DataGridView();
             panel1.SuspendLayout();
-            panel7.SuspendLayout();
+            invpnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            logoutpnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             CategoriesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            InvoicePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             UserPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)closebtn).BeginInit();
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ItemsDG).BeginInit();
@@ -93,9 +95,11 @@ namespace Cafeteria_Managment_System {
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(127, 79, 36);
-            panel1.Controls.Add(panel7);
+            panel1.Controls.Add(wlcmmssg);
+            panel1.Controls.Add(label9);
+            panel1.Controls.Add(invpnl);
+            panel1.Controls.Add(logoutpnl);
             panel1.Controls.Add(CategoriesPanel);
-            panel1.Controls.Add(InvoicePanel);
             panel1.Controls.Add(panel4);
             panel1.Controls.Add(UserPanel);
             panel1.Controls.Add(pictureBox1);
@@ -106,15 +110,79 @@ namespace Cafeteria_Managment_System {
             panel1.Size = new Size(316, 850);
             panel1.TabIndex = 0;
             // 
-            // panel7
+            // wlcmmssg
             // 
-            panel7.BackColor = Color.FromArgb(101, 109, 74);
-            panel7.Controls.Add(pictureBox6);
-            panel7.Controls.Add(label5);
-            panel7.Location = new Point(0, 751);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(316, 99);
-            panel7.TabIndex = 6;
+            wlcmmssg.AutoSize = true;
+            wlcmmssg.FlatStyle = FlatStyle.Flat;
+            wlcmmssg.Font = new Font("Poppins Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            wlcmmssg.ForeColor = Color.FromArgb(164, 172, 134);
+            wlcmmssg.Location = new Point(86, 187);
+            wlcmmssg.Name = "wlcmmssg";
+            wlcmmssg.Size = new Size(123, 36);
+            wlcmmssg.TabIndex = 10;
+            wlcmmssg.Text = "Mr.Yousef";
+            wlcmmssg.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.FlatStyle = FlatStyle.Flat;
+            label9.Font = new Font("Poppins Light", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.FromArgb(164, 172, 134);
+            label9.Location = new Point(86, 162);
+            label9.Name = "label9";
+            label9.Size = new Size(108, 36);
+            label9.TabIndex = 9;
+            label9.Text = "Welcome";
+            label9.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // invpnl
+            // 
+            invpnl.BackColor = Color.FromArgb(101, 109, 74);
+            invpnl.Controls.Add(pictureBox5);
+            invpnl.Controls.Add(label4);
+            invpnl.Cursor = Cursors.Hand;
+            invpnl.Location = new Point(0, 612);
+            invpnl.Name = "invpnl";
+            invpnl.Size = new Size(316, 99);
+            invpnl.TabIndex = 7;
+            invpnl.Click += invpnl_Click;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(11, 6);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(86, 91);
+            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox5.TabIndex = 2;
+            pictureBox5.TabStop = false;
+            pictureBox5.Click += invpnl_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Poppins", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.FromArgb(164, 172, 134);
+            label4.Location = new Point(105, 32);
+            label4.Margin = new Padding(5, 0, 5, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(143, 50);
+            label4.TabIndex = 1;
+            label4.Text = "Invoices";
+            label4.Click += invpnl_Click;
+            // 
+            // logoutpnl
+            // 
+            logoutpnl.BackColor = Color.FromArgb(101, 109, 74);
+            logoutpnl.Controls.Add(pictureBox6);
+            logoutpnl.Controls.Add(label5);
+            logoutpnl.Cursor = Cursors.Hand;
+            logoutpnl.Location = new Point(0, 751);
+            logoutpnl.Name = "logoutpnl";
+            logoutpnl.Size = new Size(316, 99);
+            logoutpnl.TabIndex = 6;
+            logoutpnl.Click += logoutpnl_Click;
             // 
             // pictureBox6
             // 
@@ -125,18 +193,20 @@ namespace Cafeteria_Managment_System {
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 2;
             pictureBox6.TabStop = false;
+            pictureBox6.Click += logoutpnl_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Poppins", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.FromArgb(193, 18, 31);
+            label5.ForeColor = Color.Red;
             label5.Location = new Point(97, 31);
             label5.Margin = new Padding(5, 0, 5, 0);
             label5.Name = "label5";
             label5.Size = new Size(124, 50);
             label5.TabIndex = 1;
             label5.Text = "LogOut";
+            label5.Click += logoutpnl_Click;
             // 
             // CategoriesPanel
             // 
@@ -173,38 +243,6 @@ namespace Cafeteria_Managment_System {
             CategoriesLabel.TabIndex = 1;
             CategoriesLabel.Text = "Categories";
             CategoriesLabel.Click += CategoriesPanel_Click;
-            // 
-            // InvoicePanel
-            // 
-            InvoicePanel.BackColor = Color.FromArgb(101, 109, 74);
-            InvoicePanel.Controls.Add(pictureBox5);
-            InvoicePanel.Controls.Add(label4);
-            InvoicePanel.Location = new Point(0, 612);
-            InvoicePanel.Name = "InvoicePanel";
-            InvoicePanel.Size = new Size(316, 99);
-            InvoicePanel.TabIndex = 4;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(11, 6);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(86, 91);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 2;
-            pictureBox5.TabStop = false;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Poppins", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.FromArgb(164, 172, 134);
-            label4.Location = new Point(105, 32);
-            label4.Margin = new Padding(5, 0, 5, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(143, 50);
-            label4.TabIndex = 1;
-            label4.Text = "Invoices";
             // 
             // panel4
             // 
@@ -290,7 +328,7 @@ namespace Cafeteria_Managment_System {
             // 
             panel2.BackColor = Color.FromArgb(147, 102, 57);
             panel2.Controls.Add(label6);
-            panel2.Controls.Add(pictureBox7);
+            panel2.Controls.Add(closebtn);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(316, 0);
             panel2.Margin = new Padding(5);
@@ -310,15 +348,17 @@ namespace Cafeteria_Managment_System {
             label6.TabIndex = 2;
             label6.Text = "Cafetria Managment System";
             // 
-            // pictureBox7
+            // closebtn
             // 
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(1137, 1);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(44, 44);
-            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox7.TabIndex = 0;
-            pictureBox7.TabStop = false;
+            closebtn.Cursor = Cursors.Hand;
+            closebtn.Image = (Image)resources.GetObject("closebtn.Image");
+            closebtn.Location = new Point(1137, 1);
+            closebtn.Name = "closebtn";
+            closebtn.Size = new Size(44, 44);
+            closebtn.SizeMode = PictureBoxSizeMode.Zoom;
+            closebtn.TabIndex = 0;
+            closebtn.TabStop = false;
+            closebtn.Click += closebtn_Click;
             // 
             // panel8
             // 
@@ -545,15 +585,16 @@ namespace Cafeteria_Managment_System {
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             panel1.ResumeLayout(false);
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
+            panel1.PerformLayout();
+            invpnl.ResumeLayout(false);
+            invpnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            logoutpnl.ResumeLayout(false);
+            logoutpnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             CategoriesPanel.ResumeLayout(false);
             CategoriesPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            InvoicePanel.ResumeLayout(false);
-            InvoicePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -563,7 +604,7 @@ namespace Cafeteria_Managment_System {
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)closebtn).EndInit();
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
@@ -580,19 +621,16 @@ namespace Cafeteria_Managment_System {
         private Label UserLabel;
         private Panel UserPanel;
         private PictureBox pictureBox2;
-        private Panel InvoicePanel;
-        private PictureBox pictureBox5;
-        private Label label4;
         private Panel panel4;
         private PictureBox pictureBox3;
         private Label label2;
-        private Panel panel7;
+        private Panel logoutpnl;
         private PictureBox pictureBox6;
         private Label label5;
         private Panel CategoriesPanel;
         private PictureBox pictureBox4;
         private Label CategoriesLabel;
-        private PictureBox pictureBox7;
+        private PictureBox closebtn;
         private Label label6;
         private Panel panel8;
         private PictureBox pictureBox8;
@@ -605,5 +643,10 @@ namespace Cafeteria_Managment_System {
         private ComboBox CategoriesCB;
         private Label label8;
         private Guna.UI2.WinForms.Guna2DataGridView ItemsDG;
+        private Panel invpnl;
+        private PictureBox pictureBox5;
+        private Label label4;
+        private Label wlcmmssg;
+        private Label label9;
     }
 }

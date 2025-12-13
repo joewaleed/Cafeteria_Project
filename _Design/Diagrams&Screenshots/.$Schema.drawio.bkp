@@ -1,0 +1,70 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.2.4">
+  <diagram name="Page-1" id="Y6dAVn2bsJ1rd67ZN3Om">
+    <mxGraphModel dx="595" dy="329" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jEsDB5_NjfYyHckE2AtD-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="USERID(PK)|USERNAME|USERGENDER|USERPASS|USERPHINE|ADDRESS" vertex="1">
+          <mxGeometry height="20" width="440" x="370" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="jEsDB5_NjfYyHckE2AtD-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="CATCODE(PK)| CATNAME | CATDESC" vertex="1">
+          <mxGeometry height="20" width="230" x="370" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="jEsDB5_NjfYyHckE2AtD-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="USERS:-" vertex="1">
+          <mxGeometry height="30" width="60" x="360" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="jEsDB5_NjfYyHckE2AtD-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="CAT:-" vertex="1">
+          <mxGeometry height="30" width="60" x="350" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="jEsDB5_NjfYyHckE2AtD-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="ITEMCODE(PK) | ITEMANME | PRICE | ITEMCODE(FK)" vertex="1">
+          <mxGeometry height="40" width="320" x="365" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="jEsDB5_NjfYyHckE2AtD-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ITEMS:-" vertex="1">
+          <mxGeometry height="30" width="60" x="360" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="jEsDB5_NjfYyHckE2AtD-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="INVOICEID(PK)| USERID(FK) | INVOICE DATE | INVOICE AMOUNT" vertex="1">
+          <mxGeometry height="30" width="410" x="365" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="jEsDB5_NjfYyHckE2AtD-15" edge="1" parent="1" source="jEsDB5_NjfYyHckE2AtD-14" style="endArrow=none;html=1;rounded=0;entryX=0.05;entryY=1.03;entryDx=0;entryDy=0;entryPerimeter=0;" target="jEsDB5_NjfYyHckE2AtD-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="287.5" y="425" />
+            </Array>
+            <mxPoint x="472.5" y="455" as="sourcePoint" />
+            <mxPoint x="377.5" y="295" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jEsDB5_NjfYyHckE2AtD-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="INVOICE:-" vertex="1">
+          <mxGeometry height="20" width="60" x="365" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="jEsDB5_NjfYyHckE2AtD-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="ITEMCODE(FK)|INVOICE CODE(FK) | ITEMNAME | PRICE" vertex="1">
+          <mxGeometry height="20" width="355" x="365" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="jEsDB5_NjfYyHckE2AtD-19" edge="1" parent="1" source="jEsDB5_NjfYyHckE2AtD-17" style="endArrow=classic;html=1;rounded=0;exitX=0.159;exitY=0.049;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="jEsDB5_NjfYyHckE2AtD-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="470" />
+            </Array>
+            <mxPoint x="550" y="430" as="sourcePoint" />
+            <mxPoint x="600" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jEsDB5_NjfYyHckE2AtD-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="ItemPerInvoice" vertex="1">
+          <mxGeometry height="30" width="90" x="360" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="jEsDB5_NjfYyHckE2AtD-22" edge="1" parent="1" source="jEsDB5_NjfYyHckE2AtD-7" style="endArrow=classic;html=1;rounded=0;exitX=0.856;exitY=0.051;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.179;entryY=1.044;entryDx=0;entryDy=0;entryPerimeter=0;" target="jEsDB5_NjfYyHckE2AtD-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="550" y="430" as="sourcePoint" />
+            <mxPoint x="600" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jEsDB5_NjfYyHckE2AtD-23" edge="1" parent="1" source="jEsDB5_NjfYyHckE2AtD-17" style="endArrow=classic;html=1;rounded=0;exitX=0.435;exitY=0.05;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.22;entryY=0.965;entryDx=0;entryDy=0;entryPerimeter=0;" target="jEsDB5_NjfYyHckE2AtD-14" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="550" y="430" as="sourcePoint" />
+            <mxPoint x="600" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

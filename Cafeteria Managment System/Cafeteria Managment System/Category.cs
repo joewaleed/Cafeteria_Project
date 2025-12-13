@@ -13,6 +13,7 @@ namespace Cafeteria_Managment_System {
             InitializeComponent();
             confunc = new ConnectionFunction();
             ShowCategories();
+            wlcmmssg.Text = $"{CurrentUser.Gender}{CurrentUser.Name}";
         }
 
         private static Category _instance;
@@ -34,6 +35,7 @@ namespace Cafeteria_Managment_System {
 
         public void Switch() {
             ShowCategories();
+            wlcmmssg.Text = $"{CurrentUser.Gender}{CurrentUser.Name}";
             this.Show();
         }
 
@@ -44,7 +46,7 @@ namespace Cafeteria_Managment_System {
                 MessageBox.Show("Description field is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } else {
                 try {
-                    string Query = $"Insert into Cat values ('{NameTB.Text}','{DescriptionTB.Text}')";
+                    string Query = $"Insert into Cat values (LOWER('{NameTB.Text}'),'{DescriptionTB.Text}')";
                     confunc.SetData(Query);
                     ShowCategories();
                 } catch (Exception exception) {
@@ -86,7 +88,7 @@ namespace Cafeteria_Managment_System {
         }
 
         private void Delcatbtn_Click(object sender, EventArgs e) {
-            DialogResult result = MessageBox.Show($"Are you sure you want to delete ({NameTB.Text}) completley?","Warning",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show($"Are you sure you want to delete ({NameTB.Text}) completley?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (result == DialogResult.OK) {
                 if (key == 0 || string.IsNullOrWhiteSpace(NameTB.Text)) {
                     MessageBox.Show("Key not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -123,6 +125,22 @@ namespace Cafeteria_Managment_System {
         private void ItemPanel_Click(object sender, EventArgs e) {
             Items items = Items.GetInstance();
             items.Switch();
+            this.Hide();
+        }
+
+        private void logoutpnl_Click(object sender, EventArgs e) {
+            Login logout = Login.GetInstance();
+            logout.Switch();
+            this.Hide();
+        }
+
+        private void closebtn_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
+
+        private void invpnl_Click(object sender, EventArgs e) {
+            Invoices invoices = Invoices.GetInstance();
+            invoices.Switch();
             this.Hide();
         }
     }
