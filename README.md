@@ -16,7 +16,6 @@ This repository contains:
 - SQL scripts to setup and interact with the backend database
 - Images and design assets for UI/UX (if applicable)
 
-> ⚠️ No official documentation or detailed feature design is included — extend as needed.
 
 ## 🧩 Getting Started
 
