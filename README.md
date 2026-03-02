@@ -1,6 +1,7 @@
 # Cafeteria Management System
 
 A simple desktop application developed in **C#** for managing cafeteria data and operations using a **SQL database**. This project demonstrates basic CRUD operations, data handling, and user interface interaction for a cafeteria environment.
+[Preview For The Project interface](https://github.com/joewaleed/Cafeteria_Project/blob/master/Images/Cashier%20Billing%20Page.jpg)
 
 ## 🛠️ Features
 
