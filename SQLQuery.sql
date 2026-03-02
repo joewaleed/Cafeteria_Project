@@ -5,8 +5,8 @@ GO
 CREATE TABLE Users(
 	UserID int primary key IDENTITY(1,1) NOT NULL,
 	UserName varchar(50) NOT NULL,
-	UserGender varchar(6) NOT NULL,
-	UserPass varchar(25) NOT NULL,
+	UserGender varchar(6) NOT NULL check (usergender in ('male','female')),
+	UserPass varchar(60) NOT NULL,
 	UserPhone varchar(15) NULL unique,
 	UserAddress varchar(150) NOT NULL,
 	isAdmin bit Not Null
@@ -43,6 +43,7 @@ itemQunatity int not null
 )
 GO
 create index ItIV_Index on ItemPerInvoice(InvoiceID)
+/*
 /*Commands for Categories(Cat) Table*/
 select * from Cat
 
@@ -63,4 +64,4 @@ Delete from Item where ItemCode = {key}
 Insert into Users values ('{NameTB.Text}','{GenderCB.SelectedText}','{PasswordTB.Text}','{PhoneTB.Text}','{AddressTB.Text}')
 
 Update Users set UserName = '{NameTB.Text}',UserGender = '{GenderCB.SelectedItem.ToString().ToLower()}', UserPass = '{PasswordTB.Text}',UserPhone = '{PhoneTB.Text}',UserAddress = '{AddressTB.Text}' where UserID = {key}
-
+*/
