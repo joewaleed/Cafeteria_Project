@@ -597,7 +597,7 @@
             UsersDG.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(225, 205, 233);
             UsersDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            UsersDG.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            UsersDG.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
             UsersDG.BackgroundColor = Color.FromArgb(88, 47, 14);
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(155, 89, 182);

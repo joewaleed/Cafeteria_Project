@@ -1,5 +1,7 @@
-namespace Cafeteria_Managment_System
-{
+using System.Security.Cryptography;
+using System.Text;
+
+namespace Cafeteria_Managment_System {
     public partial class User : Form {
         ConnectionFunction confunc;
         public User() {
@@ -8,6 +10,7 @@ namespace Cafeteria_Managment_System
             ShowUsers();
             wlcmmssg.Text = $"{CurrentUser.Gender}{CurrentUser.Name}";
         }
+        int key = 0;
         private static User _instance;
         public static User GetInstance() {
             if (_instance == null || _instance.IsDisposed) {
@@ -46,16 +49,17 @@ namespace Cafeteria_Managment_System
                 MessageBox.Show("Address field is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } else {
                 try {
+                    HMACSHA1 hmac = new HMACSHA1(Encoding.UTF8.GetBytes("secretkey"));
                     string isAdmin = AdminCheck.Checked ? "1" : "0";
-                    string Query = $"Insert into Users values ('{NameTB.Text}','{GenderCB.SelectedItem.ToString().ToLower()}','{PasswordTB.Text}','{PhoneTB.Text}','{AddressTB.Text}',{isAdmin})";
+                    string Query = $"Insert into Users values ('{NameTB.Text}','{GenderCB.SelectedItem.ToString().ToLower()}','{Convert.ToBase64String(hmac.ComputeHash(Encoding.UTF8.GetBytes(PasswordTB.Text)))}','{PhoneTB.Text}','{AddressTB.Text}',{isAdmin})";
                     confunc.SetData(Query);
                     ShowUsers();
+                    ResetKey();
                 } catch (Exception exception) {
                     MessageBox.Show("Something went wrong", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
-        int key = 0;
 
         private void ResetKey() {
             key = 0;
@@ -69,7 +73,7 @@ namespace Cafeteria_Managment_System
         private void UsersDG_CellClick(object sender, DataGridViewCellEventArgs e) {
             NameTB.Text = UsersDG.SelectedRows[0].Cells[1].Value.ToString();
             GenderCB.SelectedIndex = (UsersDG.SelectedRows[0].Cells[2].Value.ToString() == "male") ? 0 : 1;
-            PasswordTB.Text = UsersDG.SelectedRows[0].Cells[3].Value.ToString();
+            PasswordTB.Text = "";
             PhoneTB.Text = UsersDG.SelectedRows[0].Cells[4].Value.ToString();
             AddressTB.Text = UsersDG.SelectedRows[0].Cells[5].Value.ToString();
             AdminCheck.Checked = bool.Parse(UsersDG.SelectedRows[0].Cells[6].Value.ToString());
@@ -82,8 +86,8 @@ namespace Cafeteria_Managment_System
         private void Editusrbtn_Click(object sender, EventArgs e) {
             if (string.IsNullOrWhiteSpace(NameTB.Text)) {
                 MessageBox.Show("Name field is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } else if (string.IsNullOrWhiteSpace(PasswordTB.Text)) {
-                MessageBox.Show("Password field is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } else if (!string.IsNullOrWhiteSpace(PasswordTB.Text) && PasswordTB.Text.Length < 8) {
+                MessageBox.Show("Password field must be greater than 8", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } else if (GenderCB.SelectedIndex == -1) {
                 MessageBox.Show("Gender not selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } else if (string.IsNullOrWhiteSpace(PhoneTB.Text)) {
@@ -92,15 +96,19 @@ namespace Cafeteria_Managment_System
                 MessageBox.Show("Address field is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } else {
                 try {
+                    HMACSHA1 hmac = new HMACSHA1(Encoding.UTF8.GetBytes("secretkey"));
                     string Query = "select Count(isAdmin) from users where isAdmin = 1";
                     int adminCount = int.Parse(confunc.GetData(Query).Rows[0][0].ToString());
                     Query = $"select isAdmin from users where UserID ={key}";
                     bool isUserAdmin = bool.Parse(confunc.GetData(Query).Rows[0][0].ToString());
-                    if ((isUserAdmin && adminCount > 1) || !isUserAdmin) {
+                    if ((isUserAdmin && adminCount >= 1) || !isUserAdmin) {
                         string isAdmin = AdminCheck.Checked ? "1" : "0";
-                        Query = $"Update Users set UserName = '{NameTB.Text}',UserGender = '{GenderCB.SelectedItem.ToString().ToLower()}', UserPass = '{PasswordTB.Text}',UserPhone = '{PhoneTB.Text}',UserAddress = '{AddressTB.Text}',isAdmin={isAdmin} where UserID = {key}";
+                        Query = (!string.IsNullOrWhiteSpace(PasswordTB.Text)) ? $"Update Users set UserName = '{NameTB.Text}',UserGender = '{GenderCB.SelectedItem.ToString().ToLower()}', UserPass = '{Convert.ToBase64String(hmac.ComputeHash(Encoding.UTF8.GetBytes(PasswordTB.Text)))}',UserPhone = '{PhoneTB.Text}',UserAddress = '{AddressTB.Text}',isAdmin={isAdmin} where UserID = {key}" :
+                            $"Update Users set UserName = '{NameTB.Text}',UserGender = '{GenderCB.SelectedItem.ToString().ToLower()}', UserPhone = '{PhoneTB.Text}',UserAddress = '{AddressTB.Text}',isAdmin={isAdmin} where UserID = {key}";
+
                         confunc.SetData(Query);
                         ShowUsers();
+                        ResetKey();
                     } else {
                         MessageBox.Show("You can't Edit the last admin in the system to non-admin", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }

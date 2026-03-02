@@ -25,8 +25,8 @@
                 string Query = "select I.InvoiceId, U.UserName, I.InvoiceDate,I.InvoiceAmount from Invoice I Left join Users U on U.UserID = I.UserID";
                 InvoicesDGV.DataSource = confunc.GetData(Query);
                 ShowItems();
-            } catch (Exception exception) {
-                MessageBox.Show($"Couldn't retrive data \n {exception.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } catch (Exception){
+                MessageBox.Show($"Couldn't retrive data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -91,7 +91,7 @@
                     throw new Exception("Something went wrong");
                 }
                 ShowItems();
-            } catch (Exception exception) {
+            } catch (Exception) {
                 MessageBox.Show($"Couldn't retrive data", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

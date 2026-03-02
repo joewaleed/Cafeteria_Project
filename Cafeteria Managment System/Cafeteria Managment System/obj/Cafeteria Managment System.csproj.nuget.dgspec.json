@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CollegeFiles\\Introduction To Database\\_Project_app\\Cafeteria Managment System\\Cafeteria Managment System\\Cafeteria Managment System.csproj": {}
+    "C:\\Users\\Yousef\\source\\repos\\joewaleed\\Cafeteria_Project\\Cafeteria Managment System\\Cafeteria Managment System\\Cafeteria Managment System.csproj": {}
   },
   "projects": {
-    "D:\\CollegeFiles\\Introduction To Database\\_Project_app\\Cafeteria Managment System\\Cafeteria Managment System\\Cafeteria Managment System.csproj": {
+    "C:\\Users\\Yousef\\source\\repos\\joewaleed\\Cafeteria_Project\\Cafeteria Managment System\\Cafeteria Managment System\\Cafeteria Managment System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CollegeFiles\\Introduction To Database\\_Project_app\\Cafeteria Managment System\\Cafeteria Managment System\\Cafeteria Managment System.csproj",
+        "projectUniqueName": "C:\\Users\\Yousef\\source\\repos\\joewaleed\\Cafeteria_Project\\Cafeteria Managment System\\Cafeteria Managment System\\Cafeteria Managment System.csproj",
         "projectName": "Cafeteria Managment System",
-        "projectPath": "D:\\CollegeFiles\\Introduction To Database\\_Project_app\\Cafeteria Managment System\\Cafeteria Managment System\\Cafeteria Managment System.csproj",
+        "projectPath": "C:\\Users\\Yousef\\source\\repos\\joewaleed\\Cafeteria_Project\\Cafeteria Managment System\\Cafeteria Managment System\\Cafeteria Managment System.csproj",
         "packagesPath": "C:\\Users\\Yousef\\.nuget\\packages\\",
-        "outputPath": "D:\\CollegeFiles\\Introduction To Database\\_Project_app\\Cafeteria Managment System\\Cafeteria Managment System\\obj\\",
+        "outputPath": "C:\\Users\\Yousef\\source\\repos\\joewaleed\\Cafeteria_Project\\Cafeteria Managment System\\Cafeteria Managment System\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Yousef\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\Yousef\\AppData\\Roaming\\Cosmos User Kit\\packages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -75,7 +78,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

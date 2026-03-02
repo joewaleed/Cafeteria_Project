@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sjfqwCdb5+M=",
+  "dgSpecHash": "lKqVEA+TRes=",
   "success": true,
-  "projectFilePath": "D:\\CollegeFiles\\Introduction To Database\\_Project_app\\Cafeteria Managment System\\Cafeteria Managment System\\Cafeteria Managment System.csproj",
+  "projectFilePath": "C:\\Users\\Yousef\\source\\repos\\joewaleed\\Cafeteria_Project\\Cafeteria Managment System\\Cafeteria Managment System\\Cafeteria Managment System.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Yousef\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\Yousef\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
@@ -31,15 +31,5 @@
     "C:\\Users\\Yousef\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512",
     "C:\\Users\\Yousef\\.nuget\\packages\\system.memory.data\\8.0.1\\system.memory.data.8.0.1.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
-      "projectPath": "D:\\CollegeFiles\\Introduction To Database\\_Project_app\\Cafeteria Managment System\\Cafeteria Managment System\\Cafeteria Managment System.csproj",
-      "warningLevel": 1,
-      "filePath": "D:\\CollegeFiles\\Introduction To Database\\_Project_app\\Cafeteria Managment System\\Cafeteria Managment System\\Cafeteria Managment System.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }

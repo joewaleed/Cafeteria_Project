@@ -24,14 +24,14 @@
         /// </summary>
         private void InitializeComponent() {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Welcome));
             panel8 = new Panel();
             AddadmnBtn = new Button();
@@ -88,7 +88,7 @@
             // 
             AddressTB.BackColor = Color.Yellow;
             AddressTB.BorderThickness = 0;
-            AddressTB.CustomizableEdges = customizableEdges9;
+            AddressTB.CustomizableEdges = customizableEdges1;
             AddressTB.DefaultText = "";
             AddressTB.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             AddressTB.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -105,7 +105,7 @@
             AddressTB.PlaceholderForeColor = Color.FromArgb(101, 109, 74);
             AddressTB.PlaceholderText = "Address";
             AddressTB.SelectedText = "";
-            AddressTB.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            AddressTB.ShadowDecoration.CustomizableEdges = customizableEdges2;
             AddressTB.Size = new Size(358, 57);
             AddressTB.TabIndex = 11;
             // 
@@ -113,7 +113,7 @@
             // 
             PhoneTB.BackColor = Color.Yellow;
             PhoneTB.BorderThickness = 0;
-            PhoneTB.CustomizableEdges = customizableEdges11;
+            PhoneTB.CustomizableEdges = customizableEdges3;
             PhoneTB.DefaultText = "";
             PhoneTB.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             PhoneTB.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -130,7 +130,7 @@
             PhoneTB.PlaceholderForeColor = Color.FromArgb(101, 109, 74);
             PhoneTB.PlaceholderText = "Phone Number";
             PhoneTB.SelectedText = "";
-            PhoneTB.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            PhoneTB.ShadowDecoration.CustomizableEdges = customizableEdges4;
             PhoneTB.Size = new Size(358, 57);
             PhoneTB.TabIndex = 10;
             // 
@@ -138,7 +138,7 @@
             // 
             PasswordTB.BackColor = Color.Yellow;
             PasswordTB.BorderThickness = 0;
-            PasswordTB.CustomizableEdges = customizableEdges13;
+            PasswordTB.CustomizableEdges = customizableEdges5;
             PasswordTB.DefaultText = "";
             PasswordTB.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             PasswordTB.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -155,7 +155,7 @@
             PasswordTB.PlaceholderForeColor = Color.FromArgb(101, 109, 74);
             PasswordTB.PlaceholderText = "Password";
             PasswordTB.SelectedText = "";
-            PasswordTB.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            PasswordTB.ShadowDecoration.CustomizableEdges = customizableEdges6;
             PasswordTB.Size = new Size(358, 57);
             PasswordTB.TabIndex = 9;
             // 
@@ -188,7 +188,7 @@
             // 
             NameTB.BackColor = Color.Yellow;
             NameTB.BorderThickness = 0;
-            NameTB.CustomizableEdges = customizableEdges15;
+            NameTB.CustomizableEdges = customizableEdges7;
             NameTB.DefaultText = "";
             NameTB.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             NameTB.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -205,7 +205,7 @@
             NameTB.PlaceholderForeColor = Color.FromArgb(101, 109, 74);
             NameTB.PlaceholderText = "User name";
             NameTB.SelectedText = "";
-            NameTB.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            NameTB.ShadowDecoration.CustomizableEdges = customizableEdges8;
             NameTB.Size = new Size(358, 57);
             NameTB.TabIndex = 5;
             // 
@@ -243,6 +243,7 @@
             closebtn.SizeMode = PictureBoxSizeMode.Zoom;
             closebtn.TabIndex = 0;
             closebtn.TabStop = false;
+            closebtn.Click += LeaveTxtbtn_Click;
             // 
             // panel1
             // 

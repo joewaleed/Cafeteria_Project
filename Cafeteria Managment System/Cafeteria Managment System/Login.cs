@@ -1,4 +1,7 @@
-﻿namespace Cafeteria_Managment_System {
+﻿using System.Security.Cryptography;
+using System.Text;
+
+namespace Cafeteria_Managment_System {
     public partial class Login : Form {
         ConnectionFunction confunc;
         public Login() {
@@ -27,12 +30,13 @@
                 MessageBox.Show("Password field is empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } else {
                 try {
-                    string query = $"select count(*) from Users where Lower(UserName) = Lower('{UsernameTB.Text}') AND UserPass = '{PasswordTB.Text}'";
+                    HMACSHA1 hmac = new HMACSHA1(Encoding.UTF8.GetBytes("secretkey"));
+                    string query = $"select count(*) from Users where Lower(UserName) = Lower('{UsernameTB.Text}') AND UserPass = '{Convert.ToBase64String(hmac.ComputeHash(Encoding.UTF8.GetBytes(PasswordTB.Text)))}'";
                     int count = int.Parse(confunc.GetData(query).Rows[0][0].ToString());
                     if (count > 1) {
                         throw new Exception("Login output contains more than one result");
                     } else if (count == 1) {
-                        query = $"select isAdmin,UserName,UserGender,UserID from Users where UserName = '{UsernameTB.Text}' AND UserPass = '{PasswordTB.Text}'";
+                        query = $"select isAdmin,UserName,UserGender,UserID from Users where UserName = '{UsernameTB.Text}' AND UserPass = '{Convert.ToBase64String(hmac.ComputeHash(Encoding.UTF8.GetBytes(PasswordTB.Text)))}'";
                         CurrentUser.Name = confunc.GetData(query).Rows[0][1].ToString();
                         CurrentUser.Gender = confunc.GetData(query).Rows[0][2].ToString();
                         CurrentUser.Userid = int.Parse(confunc.GetData(query).Rows[0][3].ToString());
