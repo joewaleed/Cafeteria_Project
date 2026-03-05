@@ -2,6 +2,9 @@
 
 A simple desktop application developed in **C#** for managing cafeteria data and operations using a **SQL database**. This project demonstrates basic CRUD operations, data handling, and user interface interaction for a cafeteria environment.
 
+
+![Cashier Billing Page](https://github.com/user-attachments/assets/e277cc69-bb04-4413-842f-a69c1c6df31e)
+
 ## 🛠️ Features
 
 - Built with **C# (.NET Framework / .NET Core)**
